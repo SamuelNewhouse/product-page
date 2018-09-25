@@ -92,23 +92,59 @@ li:last-child::before{
     visibility: hidden;
 }
 
-.examples {
-    margin: 0;
-    padding: 0;    
-    display: flex;
-    justify-content: space-between;    
-    min-width: 1px;
-    min-height: 1px;    
-    height: auto;
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "email-label email-input ."
+    "prime-label prime-input ."
+    ". submit-button .";
+    align-items: baseline;
+    grid-row-gap: 1em;
 }
 
-.examples img, .examples object {
-    margin: 0;
-    padding: 0;    
-    max-width: 200px;    
-    min-width: 1px;
-    min-height: 1px;
-    height: auto;
+label[for="email"] {
+    grid-area: email-label;
+}
+#email {
+    grid-area: email-input;
+}
+label[for="prime"] {
+    grid-area: prime-label;
+}
+#prime {
+    grid-area: prime-input;
+}
+#submit {
+    grid-area: submit-button;
+}
+
+label {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+input {
+    font-size: 1.3em;
+    color: #c9703e;
+}
+input::placeholder{
+    color: #c9703e;
+}
+
+#examples {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    grid-column-gap: 5%;
+    grid-row-gap: 2em;
+}
+
+#examples img {
+    display: block;
+    max-width: 90%;
 }
 
 #submit {
