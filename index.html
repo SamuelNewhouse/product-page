@@ -39,8 +39,14 @@
 		 allowfullscreen></iframe>
 	</section>
 
+	<section>
+		<h1>Get a quote for your own Premium Prime.</h1>
+		<p>Just enter you email and the prime number you desire, and we'll send you a quote ASAP!</p>
 		<form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+			<label for="email">Email:</label>
 			<input id="email" type="email" name="email" required placeholder="you@somewhere.com">
+			<label for="prime">Prime:</label>
+			<input id="prime" type="number" name="prime" min="2" required placeholder="Your Prime Number">
 			<input id="submit" type="submit">
 		</form>
 		<iframe id="video" width="800" height="450" src="https://www.youtube.com/embed/mIStB5X4U8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
