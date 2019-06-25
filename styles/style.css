@@ -1,34 +1,27 @@
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
-
 header, section, footer {
     max-width: 800px;
     margin: auto;
 }
 
-h1 {
-    font-size: 1.5em;
-}
-
-section, footer {
+section {
     border-top: 4px solid #c9703e;
 }
 
-section {
-    padding-bottom: 4em;    
+section, footer {
+  margin-top: 60px;
 }
 
-footer {
-    padding-top: 1em;
+.btn {
+  padding: 4px 8px;
+  margin: 0 2px;
+  color: #fff;
+  background: linear-gradient(#ff7d32, #c9703e);
+  border: none;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.main {
+  padding: 0 10px;
 }
 
 #header-img {
@@ -36,198 +29,120 @@ footer {
     width: 100%;
 }
 
-nav {
-    display: flex;
-    position: fixed;
-    font-size: 1.1em;
-    z-index: 5;
+#nav-bar {
+  z-index: 5;
+  width: 100%;
+  background: #000;
+  padding: 4px 10px;
+  position: fixed;
 }
 
-nav a {
-    padding: .2em;
-    background: linear-gradient(#ffb364, #6f0000);
-    color: rgb(255, 255, 255);
-    margin-right: 0.7em;
-    border-radius: 4px;
-    text-decoration: none;
-    box-shadow: 2px 2px 1px 1px #000;
-    border: 1px outset #999;
+#nav-bar div {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
 }
 
-nav a:hover {
-    background: linear-gradient(#ffca92, #b50000);
+ol, .video-wrapper {
+  margin-top: 2em;
 }
 
 ol {
-    list-style: none;
-    padding-left: 70px;
-    margin: 0;
+  list-style: none;
+  font-size: 1.25em;
+  margin-left: 4em;
+  padding: 0;
 }
 li {
-    position: relative;
-    font-size: 20px;
-    margin-top: 35px;
+  position: relative;
+  margin-bottom: 15px;
 }
-
-li::before {
-    font-size: 35px;
-}
-
-li::before {
-    content: attr(value);
-    position: absolute;
-    left: -40px;
-    top: -13.5px
-
-}
-
-li:last-child::before{
-    content: attr(value);
-    position: absolute;
-    left: -55px;
+li:before {
+  position: absolute;
+  display: inline-block;
+  content: attr(value);
+  left: -1.9em;
+  top: -.375em;
+  color: #000;
+  width: 1.2em;
+  font-size: 1.5em;
+  text-align: right;
 }
 
 .anchor {
-    display: block;
-    position: relative;
-    top: -3em;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: -0.1em;
+  visibility: hidden;
 }
 
-form {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "email-label email-input ."
-    "prime-label prime-input ."
-    ". submit-button .";
-    align-items: baseline;
-    grid-row-gap: 1em;
+/* https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+.video-wrapper{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+  height: 0;
 }
-
-label[for="email"] {
-    grid-area: email-label;
-}
-#email {
-    grid-area: email-input;
-}
-label[for="prime"] {
-    grid-area: prime-label;
-}
-#prime {
-    grid-area: prime-input;
-}
-#submit {
-    grid-area: submit-button;
-}
-
-label {
-    font-weight: 700;
-    margin-right: 10px;
-}
-
-input {
-    font-size: 1.3em;
-    color: #c9703e;
-}
-input::placeholder{
-    color: #eabd98;
+.video-wrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 #examples {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto;
-    grid-column-gap: 5%;
-    grid-row-gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 2em;
 }
 
 #examples img {
-    display: block;
-    max-width: 90%;
+  max-width: 100%;
 }
 
-#submit {
-    background: linear-gradient(#ffb364, #6f0000);
-    color: rgb(255, 255, 255);
-    margin-right: 0.7em;
-    border-radius: 4px;
-    text-decoration: none;
-    box-shadow: 1px 1px #000;
-    border: 1px outset #999;
+@media only screen and (max-width: 550px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  .btn {
+    line-height: 100%;
+  }
+  #header-img {
+    margin-top: 2.8em;
+  }
+  ol {
+    font-size: 1.2em;
+    margin-left: 3.0em;
+  }
+  li:before {
+    position: absolute;
+    display: inline-block;
+    content: attr(value);
+    left: -1.7em;
+  }
+  section:first-of-type {
+    margin-top: 2em;
+  }
 }
 
-#submit:hover{
-    background: linear-gradient(#ffca92, #b50000);
-}
-
-#video {
-    width: 800px;
-    height: 450px;
-}
-
-@media only screen and (max-width: 830px) {
-    #video {
-        width: 700px;
-        height: 393.75px;
-    }
-    #header-img{
-        margin-top: 3em;
-    }
-}
-@media only screen and (max-width: 730px) {
-    #video {
-        width: 600px;
-        height: 337.5px;
-    }
-    #header-img{
-        margin-top: 3.25em;
-    }
-    body {
-        font-size: 0.8rem;
-    }
-}
-@media only screen and (max-width: 630px) {
-    #video {
-        width: 500px;
-        height: 281.25px;
-    }
-    #header-img {
-        margin-top: 3.5em;
-    }
-}
-@media only screen and (max-width: 530px) {
-    #video {
-        width: 400px;
-        height: 225px;
-    }
-    #header-img {
-        margin-top: 4em;
-    }
-}
-@media only screen and (max-width: 430px) {
-    #video {
-        width: 300px;
-        height: 168.75px;
-    }
-    #header-img {
-        margin-top: 4.25em;
-    }
-}
-@media only screen and (max-width: 330px) {
-    #video {
-        width: 200px;
-        height: 125.5px;
-    }
-    #header-img {
-        margin-top: 5em;
-    }
-}
-
-@media only screen and (max-width: 290px) {
-    #header-img {
-        margin-top: 6em;
-    }
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 1.33em;
+  }
+  ol {
+    font-size: 1em;
+    margin-left: 2em;
+  }
+  li:before {
+    position: absolute;
+    display: inline-block;
+    content: attr(value);
+    left: -1.5em;
+  }
+  section:first-of-type {
+    margin-top: 1em;
+  }
 }

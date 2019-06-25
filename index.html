@@ -2,77 +2,93 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="This is my submission for the 'Build a Product Page' project on www.freecodecamp.com.">
-	<meta name="author" content="Samuel Newhouse">
-	<title>Premium Primes</title>
-	<link rel="stylesheet" href="styles/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="This is my submission for the 'Build a Product Page' project on www.freecodecamp.com.">
+  <meta name="author" content="Samuel Newhouse">
+  <title>Premium Primes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 
 <body>
-	<header id="header">
-		<nav id="nav-bar">
-			<a class="nav-link" href="#why">Why Premium Primes?</a>
-			<a class="nav-link" href="#see">See Primes in Action.</a>
-			<a class="nav-link" href="#get">Get your own Premium Prime!</a>
-		</nav>
-		<img id="header-img" src="images/prime-banner.svg">
-	</header>
+  <nav id="nav-bar">
+    <div>
+      <a class="btn" href="#why">Why us?</a>
+      <a class="btn" href="#see">See primes.</a>
+      <a class="btn" href="#get">Get quote.</a>
+      <a class="btn" href="#ideas">Need ideas?</a>
+    </div>
+  </nav>
+  <div class="main">
+    <header id="header">
+      <div id="banner">
+        <img id="header-img" src="images/prime-banner.svg">
+      </div>
+    </header>
 
-	<a id="why" class="anchor"></a>
-	<section>
-		<h1>Here are just a few of the many reasons to choose Premium Primes.</h1>
-		<ol>
-			<li value="2">Our primes are all natural.</li>
-			<li value="3">Guaranteed to never run out of stock.</li>
-			<li value="5">You can't find any primes more real than ours.</li>
-			<li value="7">Each prime is only composed of itself (100% pure!)</li>
-			<li value="11">Endlessly entertaining to the mathematically inclined (Purchase as a gift!)</li>
-		</ol>
-	</section>
+    <a id="why" class="anchor"></a>
+    <section>
+      <h2>Here are just a few of the many reasons to choose Premium Primes:</h2>
+      <ol>
+        <li value="2">Our primes are all natural.</li>
+        <li value="3">Guaranteed to never run out of stock.</li>
+        <li value="5">You can't find any primes more real than ours.</li>
+        <li value="7">Each prime is only composed of itself (100% pure!)</li>
+        <li value="11">Endlessly entertaining to the mathematically inclined (Purchase as a gift!)</li>
+      </ol>
+    </section>
 
-	<a id="see" class="anchor"></a>
-	<section>
-		<h1>Watch some primes in action!</h1>
-		<iframe id="video" src="https://www.youtube.com/embed/DXBhbwdFfLk" frameborder="0" allow="autoplay; encrypted-media"
-		 allowfullscreen></iframe>
-	</section>
+    <a id="see" class="anchor"></a>
+    <section>
+      <h2>Watch some primes in action!</h2>
+      <div class="video-wrapper">
+        <iframe id="video" width="640" height="360" src="https://www.youtube.com/embed/DXBhbwdFfLk" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </section>
 
-	<a id="get" class="anchor"></a>
-	<section>
-		<h1>Get a quote for your own Premium Prime.</h1>
-		<p>Just enter you email and the prime number you desire, and we'll send you a quote ASAP!</p>
-		<form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
-			<label for="email">Email:</label>
-			<input id="email" type="email" name="email" required placeholder="you@somewhere.com">
-			<label for="prime">Prime:</label>
-			<input id="prime" type="number" name="prime" min="2" required placeholder="Your Prime Number">
-			<input id="submit" type="submit">
-		</form>
-	</section>
+    <a id="get" class="anchor"></a>
+    <section>
+      <h2>Get a quote for your own Premium Prime.</h2>
+      <p>Just enter you email and the prime number you desire, and we'll send you a quote ASAP!</p>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" class="form-control" type="email" name="email" required placeholder="you@somewhere.com">
+        </div>
+        <div class="form-group">
+          <label for="prime">Prime:</label>
+          <input id="prime" class="form-control" type="number" name="prime" min="2" required
+            placeholder="Your Prime Number">
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
 
+    <a id="ideas" class="anchor"></a>
+    <section>
+      <h2>Need some ideas?</h2>
+      <p>Check out these prime numbers ordered by our customers!</p>
+      <div id="examples">
+        <img src="images/Prime101.svg">
+        <img src="images/Prime2.svg">
+        <img src="images/Prime941.svg">
+        <img src="images/Prime41.svg">
+        <img src="images/Prime523.svg">
+        <img src="images/Prime653.svg">
+        <img src="images/Prime61.svg">
+        <img src="images/Prime773.svg">
+        <img src="images/Prime3.svg">
+      </div>
+    </section>
 
-	<section>
-		<h1>Need some ideas?</h1>
-		<p>Check out these prime numbers ordered by our customers!</p>
-		<div id="examples">
-			<img src="images/Prime101.svg">
-			<img src="images/Prime2.svg">
-			<img src="images/Prime941.svg">
-			<img src="images/Prime41.svg">
-			<img src="images/Prime523.svg">
-			<img src="images/Prime653.svg">
-			<img src="images/Prime61.svg">
-			<img src="images/Prime773.svg">
-			<img src="images/Prime3.svg">
-		</div>
-	</section>
-
-	<footer>Made by
-		<a href="https://github.com/SamuelNewhouse" target="_blank">Samuel Newhouse</a>
-	</footer>
+    <footer>Made by
+      <a href="https://github.com/SamuelNewhouse" target="_blank">Samuel Newhouse</a>
+    </footer>
+  </div>
 </body>
 
 </html>
